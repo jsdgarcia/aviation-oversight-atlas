@@ -3,7 +3,6 @@ layout: default
 title: Aviation Oversight Atlas
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 <script>window.BASE = '{{ "" | relative_url }}';</script>
 
 Explore aviation safety authorities by **country**.

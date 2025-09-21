@@ -1,0 +1,63 @@
+---
+# This front matter tells Jekyll to process SCSS → CSS at /assets/css/style.css
+---
+
+/* 1) Load the theme first */
+@import "{{ site.theme }}";
+
+/* 2) Your overrides (al-folio-ish) */
+:root{
+  --bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --card: #ffffff;
+  --accent: #2f80ed;
+  --accent-weak: #e8f2ff;
+  --link: var(--accent);
+}
+
+/* Base */
+html, body { background: var(--bg); color: var(--text); }
+a { color: var(--link); }
+a:hover { text-decoration: underline; }
+
+/* Leap Day containers (make sure backgrounds are light) */
+.wrapper, .container, #main-content, section { background: var(--bg); }
+.sidebar, .site-header { background: #f8fafc; }  /* soften the orange */
+.sidebar a { color: var(--text); }
+.sidebar a:hover { color: var(--accent); }
+
+/* Headings */
+h1, h2, h3 { letter-spacing: -0.01em; }
+h1 { font-size: 2rem; margin: .2rem 0 .8rem; }
+h2 { font-size: 1.4rem; margin-top: 1.6rem; }
+
+/* Cards & grid (your UI) */
+.grid { display: grid; gap: 1rem; }
+.grid-2 { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.country-card, .org-card {
+  display:block; background: var(--card); border:1px solid var(--border);
+  border-radius:14px; padding:1rem; transition: box-shadow .15s, transform .05s;
+}
+.country-card:hover, .org-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,.06); transform: translateY(-1px); }
+.country-name { font-weight:600; font-size:1.05rem; margin-bottom:.25rem; }
+.country-meta, .muted { color: var(--muted); font-size:.92rem; }
+
+.badge{ display:inline-block; padding:.15rem .6rem; border-radius:999px; background:var(--accent-weak); color:#1e3a8a; font-size:.8rem; margin-right:.35rem; }
+.badge-secondary{ background:#f3f4f6; color:#374151; }
+.badge-info{ background:#e0f2fe; color:#075985; }
+
+.btn, .btn-sm{
+  display:inline-block; border:1px solid var(--accent); color:var(--accent);
+  padding:.35rem .7rem; border-radius:10px; font-size:.9rem;
+}
+.btn:hover{ background:var(--accent); color:#fff; text-decoration:none; }
+
+#countries-map, #country-map { border-radius:12px; overflow:hidden; }
+
+/* Tables */
+table{ border-collapse:collapse; width:100%; }
+th, td{ border:1px solid var(--border); padding:8px; }
+th{ background:#f8fafc; text-align:left; }
+
