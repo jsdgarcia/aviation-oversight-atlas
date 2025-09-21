@@ -1,9 +1,9 @@
 title: Aviation Oversight Atlas
 description: Country-by-country directory of aviation safety oversight authorities
-remote_theme: alshedivat/al-folio
+theme: jekyll-theme-cayman
 
 plugins:
-  - jekyll-remote-theme
+#  - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-feed
 
