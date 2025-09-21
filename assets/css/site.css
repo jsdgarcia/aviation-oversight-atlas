@@ -68,3 +68,12 @@ th { background: #f8fafc; text-align: left; }
 /* Leaflet map rounded corners to match cards */
 #countries-map, #country-map { border-radius: 12px; overflow: hidden; }
 
+/* Make Leap Day wrapper/content auto-expand with page content */
+.wrapper, .content {
+  min-height: auto !important;
+  height: auto !important;
+  position: relative !important;
+}
+
+
+
