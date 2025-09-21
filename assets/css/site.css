@@ -19,30 +19,40 @@ html, body {
   height: auto;
 }
 
-/* === Fix Leap Day “frame” so it expands with content ===================== */
-.wrapper,
-.content,
-.inner,
-.post,
-.post-content,
-#country-shell {
+/* === Leap Day layout fixes ============================================== */
+/* Leap Day positions several containers; force normal flow so content can grow */
+.wrapper, .content, .inner, .post, .post-content, #country-shell {
   position: static !important;
   height: auto !important;
   min-height: 0 !important;
   overflow: visible !important;
 }
 
-/* Map block must reserve vertical space */
-#country-map {
+/* In Leap Day the footer is placed with absolute positioning; make it flow */
+footer, .site-footer {
+  position: static !important;
+}
+
+/* Some theme builds set min-heights on sections; clear them */
+section, .markdown-body, #main, #content {
+  min-height: 0 !important;
+  height: auto !important;
+  position: static !important;
+}
+
+/* Ensure the outer wrapper can exceed the viewport */
+body, html { overflow-y: auto; }
+
+/* Map blocks must reserve vertical space */
+#countries-map, #country-map {
   display: block;
   height: 420px;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 /* Optional: keep content nicely centered */
-.post-content {
-  max-width: 1100px;
-  margin: 0 auto;
-}
+.post-content { max-width: 1100px; margin: 0 auto; }
 
 /* === Links & headings ==================================================== */
 a { color: var(--link); text-decoration: none; }
@@ -72,8 +82,10 @@ h2 { font-size: 1.4rem; margin-top: 1.6rem; }
 .country-name { font-weight: 600; font-size: 1.05rem; margin-bottom: .25rem; }
 .country-meta, .muted { color: var(--muted); font-size: .92rem; }
 
-.badge { display:inline-block; padding:.15rem .6rem; border-radius:999px;
-  background: var(--accent-weak); color: #1e3a8a; font-size:.8rem; margin-right:.35rem; }
+.badge {
+  display:inline-block; padding:.15rem .6rem; border-radius:999px;
+  background: var(--accent-weak); color: #1e3a8a; font-size:.8rem; margin-right:.35rem;
+}
 .badge-secondary { background:#f3f4f6; color:#374151; }
 .badge-info { background:#e0f2fe; color:#075985; }
 
@@ -87,8 +99,3 @@ h2 { font-size: 1.4rem; margin-top: 1.6rem; }
 table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid var(--border); padding: 8px; }
 th { background: #f8fafc; text-align: left; }
-
-/* Leaflet map rounded corners */
-#countries-map, #country-map { border-radius: 12px; overflow: hidden; }
-
-
