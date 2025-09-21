@@ -12,6 +12,17 @@
     "description":"Brazil’s national civil aviation authority. Regulates air operators and aerodromes, certifies aircraft and personnel, enforces safety oversight, and aligns with ICAO standards across Latin America’s largest market."
   },
   {
+    "id":"decea-br",
+    "name":"Departamento de Controle do Espaço Aéreo",
+    "short_name":"DECEA",
+    "type":"CAA",
+    "country_code":"BR",
+    "hq_city":"Rio de Janeiro",
+    "website":"https://www.decea.mil.br/",
+    "lat":-22.90495974235602, 
+    "lon":-43.241361689775154,
+    "description":"Brazilian ATM organization."},
+  {
     "id":"cenipa-br",
     "name":"Centro de Investigação e Prevenção de Acidentes Aeronáuticos",
     "short_name":"CENIPA",
