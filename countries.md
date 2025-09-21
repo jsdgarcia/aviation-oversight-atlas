@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Countries
+title: Aviation Oversight Atlas - Countries
 permalink: /countries/
 ---
 <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
