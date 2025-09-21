@@ -1,21 +1,20 @@
 title: Aviation Oversight Atlas
 description: Country-by-country directory of aviation safety oversight authorities
-theme: jekyll-theme-cayman
+theme: jekyll-theme-leap-day
 
 plugins:
-#  - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-feed
 
 # PROJECT SITE: this MUST match your repo name
 baseurl: "/aviation-oversight-atlas"
 
-navbar:
-  links:
-    - title: Home
-      url: /
-    - title: Countries
-      url: /countries/
+# navbar:
+#   links:
+#     - title: Home
+#       url: /
+#     - title: Countries
+#       url: /countries/
 
 markdown: kramdown
 kramdown:
