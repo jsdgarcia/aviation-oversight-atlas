@@ -1,0 +1,31 @@
+---
+layout: null
+permalink: /404.html
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Loading…</title>
+  <script>
+    (function(){
+      var BASE = '{{ "" | relative_url }}';
+      // strip the base from the path for routing
+      var path = location.pathname;
+      if (path.startsWith(BASE)) path = path.slice(BASE.length);
+      var parts = path.split('/').filter(Boolean);
+      var i = parts.indexOf('c');
+      if (i>=0 && parts[i+1]) {
+        var code = parts[i+1];
+        history.replaceState(null, '', BASE + '/c/' + code);
+        location.replace(BASE + '/country/?code=' + encodeURIComponent(code));
+        return;
+      }
+      setTimeout(function(){ location.replace(BASE + '/'); }, 50);
+    })();
+  </script>
+</head>
+<body></body>
+</html>
+

@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /api/countries.json
+---
+{{ site.data.country_centroids | jsonify }}
+

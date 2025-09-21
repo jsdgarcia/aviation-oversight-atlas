@@ -1,0 +1,12 @@
+.grid { display: grid; gap: 1rem; }
+.grid-2 { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.country-card, .org-card { display:block; border:1px solid #e5e7eb; border-radius:12px; padding:1rem; text-decoration:none; background:#fff; }
+.country-card:hover, .org-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.country-name { font-weight:600; font-size:1.05rem; margin-bottom:.25rem; }
+.country-meta { color:#6b7280; font-size:.9rem; }
+.badge { display:inline-block; padding:.1rem .5rem; border-radius:999px; background:#eef2ff; font-size:.8rem; margin-right:.35rem; }
+.badge-secondary { background:#f1f5f9; }
+.badge-info { background:#ecfeff; }
+.card-buttons .btn { margin-right:.4rem; }
+.muted { color:#6b7280; }
+

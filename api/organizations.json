@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /api/organizations.json
+---
+{{ site.data.organizations | jsonify }}
+

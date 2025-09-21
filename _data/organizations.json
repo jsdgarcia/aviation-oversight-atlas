@@ -1,0 +1,6 @@
+[
+  {"id":"anac-br","name":"Agência Nacional de Aviação Civil","short_name":"ANAC","type":"CAA","country_code":"BR","hq_city":"Brasília","website":"https://www.gov.br/anac/","lat":-15.793889,"lon":-47.882778,"description":"Brazil's civil aviation authority."},
+  {"id":"cenipa-br","name":"CENIPA","short_name":"CENIPA","type":"AIA","country_code":"BR","hq_city":"Brasília","website":"https://www.gov.br/defesa/pt-br/assuntos/forcas-armadas/aeronautica/cenipa","lat":-15.871,"lon":-47.918,"description":"Brazilian accident investigation authority."},
+  {"id":"faa-us","name":"Federal Aviation Administration","short_name":"FAA","type":"CAA","country_code":"US","hq_city":"Washington, DC","website":"https://www.faa.gov/","lat":38.882,"lon":-77.032,"description":"Civil aviation authority of the United States."},
+  {"id":"ntsb-us","name":"National Transportation Safety Board","short_name":"NTSB","type":"AIA","country_code":"US","hq_city":"Washington, DC","website":"https://www.ntsb.gov/","lat":38.895,"lon":-77.070,"description":"Independent accident investigation authority for the U.S."}
+]
