@@ -1,7 +1,537 @@
 [
-  {"id":"anac-br","name":"Agência Nacional de Aviação Civil","short_name":"ANAC","type":"CAA","country_code":"BR","hq_city":"Brasília","website":"https://www.gov.br/anac/","lat":-15.793889,"lon":-47.882778,"description":"Brazil's civil aviation authority."},
-  {"id":"decea-br","name":"Departamento de Controle do Espaço Aéreo","short_name":"DECEA","type":"CAA","country_code":"BR","hq_city":"Rio de Janeiro","website":"https://www.decea.mil.br/","lat":-22.90495974235602, "lon":-43.241361689775154,"description":"Brazilian ATM organization."},
-  {"id":"cenipa-br","name":"Centro de Investigação e Prevenção de Acidentes Aeronáuticos","short_name":"CENIPA","type":"AIA","country_code":"BR","hq_city":"Brasília","website":"https://www2.fab.mil.br/cenipa/","lat":-15.871,"lon":-47.918,"description":"Brazilian accident investigation authority."},
-  {"id":"faa-us","name":"Federal Aviation Administration","short_name":"FAA","type":"CAA","country_code":"US","hq_city":"Washington, DC","website":"https://www.faa.gov/","lat":38.882,"lon":-77.032,"description":"Civil aviation authority of the United States."},
-  {"id":"ntsb-us","name":"National Transportation Safety Board","short_name":"NTSB","type":"AIA","country_code":"US","hq_city":"Washington, DC","website":"https://www.ntsb.gov/","lat":38.895,"lon":-77.070,"description":"Independent accident investigation authority for the U.S."}
+  {
+    "id":"anac-br",
+    "name":"Agência Nacional de Aviação Civil",
+    "short_name":"ANAC",
+    "type":"CAA",
+    "country_code":"BR",
+    "hq_city":"Brasília",
+    "website":"https://www.gov.br/anac/",
+    "lat":-15.793889,
+    "lon":-47.882778,
+    "description":"Brazil’s national civil aviation authority. Regulates air operators and aerodromes, certifies aircraft and personnel, enforces safety oversight, and aligns with ICAO standards across Latin America’s largest market."
+  },
+  {
+    "id":"cenipa-br",
+    "name":"Centro de Investigação e Prevenção de Acidentes Aeronáuticos",
+    "short_name":"CENIPA",
+    "type":"AIA",
+    "country_code":"BR",
+    "hq_city":"Brasília",
+    "website":"https://www2.fab.mil.br/cenipa/",
+    "lat":-15.871,
+    "lon":-47.918,
+    "description":"Brazil’s independent aviation occurrence investigator, under the Air Force. Conducts technical investigations and issues safety recommendations to prevent recurrence."
+  },
+
+  {
+    "id":"faa-us",
+    "name":"Federal Aviation Administration",
+    "short_name":"FAA",
+    "type":"CAA",
+    "country_code":"US",
+    "hq_city":"Washington, DC",
+    "website":"https://www.faa.gov/",
+    "lat":38.882,
+    "lon":-77.032,
+    "description":"Regulates the world’s largest civil aviation system: certification, operations, airworthiness, pilot licensing, and air traffic services; also leads in UAS and commercial space integration."
+  },
+  {
+    "id":"ntsb-us",
+    "name":"National Transportation Safety Board",
+    "short_name":"NTSB",
+    "type":"AIA",
+    "country_code":"US",
+    "hq_city":"Washington, DC",
+    "website":"https://www.ntsb.gov/",
+    "lat":38.895,
+    "lon":-77.070,
+    "description":"Independent investigator for civil aviation accidents and serious incidents. Publishes authoritative reports and safety recommendations that influence global practice."
+  },
+
+  {
+    "id":"tc-ca",
+    "name":"Transport Canada Civil Aviation",
+    "short_name":"TCCA",
+    "type":"CAA",
+    "country_code":"CA",
+    "hq_city":"Ottawa",
+    "website":"https://tc.canada.ca/en/aviation",
+    "lat":45.4215,
+    "lon":-75.6972,
+    "description":"Canada’s aviation regulator. Oversees certification and operations, safety programs, and harmonization with ICAO and key bilateral partners."
+  },
+  {
+    "id":"tsb-ca",
+    "name":"Transportation Safety Board of Canada",
+    "short_name":"TSB",
+    "type":"AIA",
+    "country_code":"CA",
+    "hq_city":"Gatineau",
+    "website":"https://www.tsb.gc.ca/",
+    "lat":45.4765,
+    "lon":-75.7013,
+    "description":"Independent multimodal investigator. For aviation, conducts occurrence investigations, identifies systemic risks, and issues recommendations."
+  },
+
+  {
+    "id":"afac-mx",
+    "name":"Agencia Federal de Aviación Civil",
+    "short_name":"AFAC",
+    "type":"CAA",
+    "country_code":"MX",
+    "hq_city":"Ciudad de México",
+    "website":"https://www.gob.mx/afac",
+    "lat":19.4326,
+    "lon":-99.1332,
+    "description":"Mexico’s national civil aviation authority, successor to DGAC. Regulates operators and aerodromes, certification, and safety oversight."
+  },
+  {
+    "id":"jst-ar",
+    "name":"Junta de Seguridad en el Transporte",
+    "short_name":"JST",
+    "type":"AIA",
+    "country_code":"AR",
+    "hq_city":"Buenos Aires",
+    "website":"https://www.argentina.gob.ar/jst",
+    "lat":-34.6037,
+    "lon":-58.3816,
+    "description":"Argentina’s independent multimodal safety board (successor to JIAAC). Investigates aviation occurrences and issues safety recommendations."
+  },
+  {
+    "id":"anac-ar",
+    "name":"Administración Nacional de Aviación Civil",
+    "short_name":"ANAC Argentina",
+    "type":"CAA",
+    "country_code":"AR",
+    "hq_city":"Buenos Aires",
+    "website":"https://www.anac.gob.ar/",
+    "lat":-34.6037,
+    "lon":-58.3816,
+    "description":"Argentina’s regulator for civil aviation, including certification, licensing, and safety surveillance."
+  },
+
+  {
+    "id":"dgac-cl",
+    "name":"Dirección General de Aeronáutica Civil (Chile)",
+    "short_name":"DGAC Chile",
+    "type":"CAA",
+    "country_code":"CL",
+    "hq_city":"Santiago",
+    "website":"https://www.dgac.gob.cl/",
+    "lat":-33.4489,
+    "lon":-70.6693,
+    "description":"Chile’s national civil aviation authority, responsible for regulation, safety oversight, and air navigation services."
+  },
+
+  {
+    "id":"aerocivil-co",
+    "name":"Unidad Administrativa Especial de Aeronáutica Civil",
+    "short_name":"AEROCIVIL",
+    "type":"CAA",
+    "country_code":"CO",
+    "hq_city":"Bogotá",
+    "website":"https://www.aerocivil.gov.co/",
+    "lat":4.711,
+    "lon":-74.0721,
+    "description":"Colombia’s civil aviation authority. Regulates operators and infrastructure, and conducts safety oversight. Hosts the national accident investigation group (GRIAA)."
+  },
+
+  {
+    "id":"caa-gb",
+    "name":"Civil Aviation Authority",
+    "short_name":"UK CAA",
+    "type":"CAA",
+    "country_code":"GB",
+    "hq_city":"London",
+    "website":"https://www.caa.co.uk/",
+    "lat":51.5074,
+    "lon":-0.1278,
+    "description":"UK’s independent aviation regulator. Oversees safety, economic regulation, consumer protection, and airspace policy."
+  },
+  {
+    "id":"aaib-gb",
+    "name":"Air Accidents Investigation Branch",
+    "short_name":"AAIB",
+    "type":"AIA",
+    "country_code":"GB",
+    "hq_city":"Farnborough",
+    "website":"https://www.gov.uk/aaib",
+    "lat":51.2767,
+    "lon":-0.7551,
+    "description":"Independent branch of the UK Department for Transport. Investigates accidents/serious incidents and publishes safety recommendations."
+  },
+
+  {
+    "id":"dgac-fr",
+    "name":"Direction Générale de l’Aviation Civile",
+    "short_name":"DGAC",
+    "type":"CAA",
+    "country_code":"FR",
+    "hq_city":"Paris",
+    "website":"https://www.ecologie.gouv.fr/direction-generale-de-laviation-civile",
+    "lat":48.8566,
+    "lon":2.3522,
+    "description":"France’s national aviation authority. Regulates air transport and airspace and represents France in ICAO and European bodies."
+  },
+  {
+    "id":"bea-fr",
+    "name":"Bureau d’Enquêtes et d’Analyses pour la sécurité de l’aviation civile",
+    "short_name":"BEA",
+    "type":"AIA",
+    "country_code":"FR",
+    "hq_city":"Le Bourget",
+    "website":"https://www.bea.aero/",
+    "lat":48.9784,
+    "lon":2.4419,
+    "description":"France’s independent aviation accident investigation authority, renowned for technical depth and globally influential reports."
+  },
+
+  {
+    "id":"lba-de",
+    "name":"Luftfahrt-Bundesamt",
+    "short_name":"LBA",
+    "type":"CAA",
+    "country_code":"DE",
+    "hq_city":"Braunschweig",
+    "website":"https://www.lba.de/",
+    "lat":52.269,
+    "lon":10.526,
+    "description":"Germany’s federal aviation office. Conducts certification, approvals, and safety oversight for civil aviation."
+  },
+  {
+    "id":"bfu-de",
+    "name":"Bundesstelle für Flugunfalluntersuchung",
+    "short_name":"BFU",
+    "type":"AIA",
+    "country_code":"DE",
+    "hq_city":"Braunschweig",
+    "website":"https://www.bfu-web.de/",
+    "lat":52.285,
+    "lon":10.529,
+    "description":"Germany’s independent bureau for aircraft accident investigation. Issues safety recommendations and detailed investigation reports."
+  },
+
+  {
+    "id":"aesa-es",
+    "name":"Agencia Estatal de Seguridad Aérea",
+    "short_name":"AESA",
+    "type":"CAA",
+    "country_code":"ES",
+    "hq_city":"Madrid",
+    "website":"https://www.seguridadaerea.gob.es/",
+    "lat":40.4168,
+    "lon":-3.7038,
+    "description":"Spain’s state aviation safety agency responsible for regulation, certification and oversight."
+  },
+  {
+    "id":"ciaiac-es",
+    "name":"Comisión de Investigación de Accidentes e Incidentes de Aviación Civil",
+    "short_name":"CIAIAC",
+    "type":"AIA",
+    "country_code":"ES",
+    "hq_city":"Madrid",
+    "website":"https://www.mitma.gob.es/organos-colegiados/ciaiac",
+    "lat":40.4168,
+    "lon":-3.7038,
+    "description":"Spain’s civil aviation accident and incident investigation commission. Publishes official reports and safety recommendations."
+  },
+
+  {
+    "id":"enac-it",
+    "name":"Ente Nazionale per l’Aviazione Civile",
+    "short_name":"ENAC",
+    "type":"CAA",
+    "country_code":"IT",
+    "hq_city":"Rome",
+    "website":"https://www.enac.gov.it/",
+    "lat":41.9028,
+    "lon":12.4964,
+    "description":"Italy’s national civil aviation authority. Oversees safety regulation, certification, and airport/airline compliance."
+  },
+  {
+    "id":"ansv-it",
+    "name":"Agenzia Nazionale per la Sicurezza del Volo",
+    "short_name":"ANSV",
+    "type":"AIA",
+    "country_code":"IT",
+    "hq_city":"Rome",
+    "website":"https://www.ansv.it/",
+    "lat":41.9028,
+    "lon":12.4964,
+    "description":"Italy’s independent aviation accident investigation agency. Conducts safety investigations to prevent future occurrences."
+  },
+
+  {
+    "id":"ilt-nl",
+    "name":"Inspectie Leefomgeving en Transport – Luchtvaart",
+    "short_name":"ILT (Aviation)",
+    "type":"CAA",
+    "country_code":"NL",
+    "hq_city":"The Hague",
+    "website":"https://www.ilent.nl/",
+    "lat":52.0705,
+    "lon":4.3007,
+    "description":"The Netherlands’ transport inspectorate (aviation). Performs oversight of air operators, licensing, and compliance."
+  },
+  {
+    "id":"dutch-sb-nl",
+    "name":"Onderzoeksraad voor Veiligheid (Dutch Safety Board)",
+    "short_name":"OVV",
+    "type":"AIA",
+    "country_code":"NL",
+    "hq_city":"The Hague",
+    "website":"https://www.onderzoeksraad.nl/",
+    "lat":52.0705,
+    "lon":4.3007,
+    "description":"Independent safety board investigating occurrences across sectors, including civil aviation."
+  },
+
+  {
+    "id":"transportstyrelsen-se",
+    "name":"Transportstyrelsen – Civil Aviation",
+    "short_name":"Transportstyrelsen",
+    "type":"CAA",
+    "country_code":"SE",
+    "hq_city":"Norrköping",
+    "website":"https://www.transportstyrelsen.se/",
+    "lat":58.5877,
+    "lon":16.1924,
+    "description":"Sweden’s civil aviation regulator within the Transport Agency; certification, oversight, and compliance."
+  },
+  {
+    "id":"shk-se",
+    "name":"Statens Haverikommission",
+    "short_name":"SHK",
+    "type":"AIA",
+    "country_code":"SE",
+    "hq_city":"Stockholm",
+    "website":"https://www.havkom.se/",
+    "lat":59.3293,
+    "lon":18.0686,
+    "description":"Sweden’s accident investigation authority. Investigates aviation occurrences and issues recommendations."
+  },
+
+  {
+    "id":"jcab-jp",
+    "name":"Japan Civil Aviation Bureau",
+    "short_name":"JCAB",
+    "type":"CAA",
+    "country_code":"JP",
+    "hq_city":"Tokyo",
+    "website":"https://www.mlit.go.jp/en/koku/index.htm",
+    "lat":35.6762,
+    "lon":139.6503,
+    "description":"Japan’s national aviation authority under MLIT. Oversees certification, operations, and air navigation policy."
+  },
+  {
+    "id":"jtsb-jp",
+    "name":"Japan Transport Safety Board",
+    "short_name":"JTSB",
+    "type":"AIA",
+    "country_code":"JP",
+    "hq_city":"Tokyo",
+    "website":"https://www.mlit.go.jp/jtsb/english.html",
+    "lat":35.6762,
+    "lon":139.6503,
+    "description":"Independent investigator for aviation, marine, and rail occurrences; publishes detailed reports and safety recommendations."
+  },
+
+  {
+    "id":"dgca-in",
+    "name":"Directorate General of Civil Aviation (India)",
+    "short_name":"DGCA",
+    "type":"CAA",
+    "country_code":"IN",
+    "hq_city":"New Delhi",
+    "website":"https://www.dgca.gov.in/",
+    "lat":28.6139,
+    "lon":77.2090,
+    "description":"India’s national civil aviation regulator. Responsible for certification, licensing, safety oversight and regulatory policy."
+  },
+  {
+    "id":"aaib-in",
+    "name":"Aircraft Accident Investigation Bureau (India)",
+    "short_name":"AAIB India",
+    "type":"AIA",
+    "country_code":"IN",
+    "hq_city":"New Delhi",
+    "website":"https://aaib.gov.in/",
+    "lat":28.6139,
+    "lon":77.2090,
+    "description":"Independent bureau under the Ministry of Civil Aviation, conducting investigations into aircraft accidents and serious incidents."
+  },
+
+  {
+    "id":"caac-cn",
+    "name":"Civil Aviation Administration of China",
+    "short_name":"CAAC",
+    "type":"CAA",
+    "country_code":"CN",
+    "hq_city":"Beijing",
+    "website":"https://www.caac.gov.cn/English/Home/",
+    "lat":39.9042,
+    "lon":116.4074,
+    "description":"China’s national aviation authority responsible for regulation and safety oversight across the country’s rapidly growing aviation sector."
+  },
+  {
+    "id":"tsib-sg",
+    "name":"Transport Safety Investigation Bureau (Singapore)",
+    "short_name":"TSIB",
+    "type":"AIA",
+    "country_code":"SG",
+    "hq_city":"Singapore",
+    "website":"https://www.tsib.gov.sg/",
+    "lat":1.3521,
+    "lon":103.8198,
+    "description":"Singapore’s independent transport safety investigator for aviation and marine occurrences."
+  },
+  {
+    "id":"caas-sg",
+    "name":"Civil Aviation Authority of Singapore",
+    "short_name":"CAAS",
+    "type":"CAA",
+    "country_code":"SG",
+    "hq_city":"Singapore",
+    "website":"https://www.caas.gov.sg/",
+    "lat":1.3508,
+    "lon":103.9940,
+    "description":"National aviation authority responsible for regulation, safety oversight, and ANS within the Singapore FIR."
+  },
+
+  {
+    "id":"koca-kr",
+    "name":"Korea Office of Civil Aviation",
+    "short_name":"KOCA",
+    "type":"CAA",
+    "country_code":"KR",
+    "hq_city":"Seoul",
+    "website":"https://www.molit.go.kr/EN/",
+    "lat":37.5665,
+    "lon":126.9780,
+    "description":"South Korea’s civil aviation authority within the Ministry of Land, Infrastructure and Transport."
+  },
+  {
+    "id":"araib-kr",
+    "name":"Aviation and Railway Accident Investigation Board",
+    "short_name":"ARAIB",
+    "type":"AIA",
+    "country_code":"KR",
+    "hq_city":"Sejong",
+    "website":"https://www.araib.go.kr/",
+    "lat":36.4800,
+    "lon":127.2890,
+    "description":"Korea’s independent body investigating aviation and rail occurrences and issuing safety recommendations."
+  },
+
+  {
+    "id":"casa-au",
+    "name":"Civil Aviation Safety Authority",
+    "short_name":"CASA",
+    "type":"CAA",
+    "country_code":"AU",
+    "hq_city":"Canberra",
+    "website":"https://www.casa.gov.au/",
+    "lat":-35.2809,
+    "lon":149.1300,
+    "description":"Australia’s aviation regulator for safety rules, certification and oversight of operations and airworthiness."
+  },
+  {
+    "id":"atsb-au",
+    "name":"Australian Transport Safety Bureau",
+    "short_name":"ATSB",
+    "type":"AIA",
+    "country_code":"AU",
+    "hq_city":"Canberra",
+    "website":"https://www.atsb.gov.au/",
+    "lat":-35.2809,
+    "lon":149.1300,
+    "description":"Australia’s independent investigator for aviation, marine and rail occurrences; widely referenced reports and safety recommendations."
+  },
+
+  {
+    "id":"caanz-nz",
+    "name":"Civil Aviation Authority of New Zealand",
+    "short_name":"CAA NZ",
+    "type":"CAA",
+    "country_code":"NZ",
+    "hq_city":"Wellington",
+    "website":"https://www.caa.govt.nz/",
+    "lat":-41.2866,
+    "lon":174.7756,
+    "description":"New Zealand’s aviation regulator and safety promoter. Oversees certification, licensing and surveillance."
+  },
+  {
+    "id":"taic-nz",
+    "name":"Transport Accident Investigation Commission",
+    "short_name":"TAIC",
+    "type":"AIA",
+    "country_code":"NZ",
+    "hq_city":"Wellington",
+    "website":"https://www.taic.org.nz/",
+    "lat":-41.2866,
+    "lon":174.7756,
+    "description":"Independent commission investigating significant aviation, rail and marine accidents to improve transport safety."
+  },
+
+  {
+    "id":"sacaa-za",
+    "name":"South African Civil Aviation Authority",
+    "short_name":"SACAA",
+    "type":"CAA",
+    "country_code":"ZA",
+    "hq_city":"Pretoria",
+    "website":"https://www.caa.co.za/",
+    "lat":-25.7479,
+    "lon":28.2293,
+    "description":"South Africa’s civil aviation regulator for certification, surveillance, and safety programs in Sub-Saharan Africa’s busiest air market."
+  },
+  {
+    "id":"nsib-ng",
+    "name":"Nigerian Safety Investigation Bureau",
+    "short_name":"NSIB",
+    "type":"AIA",
+    "country_code":"NG",
+    "hq_city":"Abuja",
+    "website":"https://nsib.gov.ng/",
+    "lat":9.0765,
+    "lon":7.3986,
+    "description":"Nigeria’s independent multimodal safety investigator (successor to AIB-Nigeria). Handles aviation accident/incident investigations and recommendations."
+  },
+  {
+    "id":"kcaa-ke",
+    "name":"Kenya Civil Aviation Authority",
+    "short_name":"KCAA",
+    "type":"CAA",
+    "country_code":"KE",
+    "hq_city":"Nairobi",
+    "website":"https://www.kcaa.or.ke/",
+    "lat":-1.286389,
+    "lon":36.817223,
+    "description":"Kenya’s civil aviation regulator, providing oversight of operators and aerodromes and implementing ICAO standards in East Africa."
+  },
+  {
+    "id":"ecaa-et",
+    "name":"Ethiopian Civil Aviation Authority",
+    "short_name":"ECAA",
+    "type":"CAA",
+    "country_code":"ET",
+    "hq_city":"Addis Ababa",
+    "website":"https://www.ecaa.gov.et/",
+    "lat":8.9806,
+    "lon":38.7578,
+    "description":"Ethiopia’s national aviation authority. Oversees regulation and safety programs in a major African aviation hub."
+  },
+  {
+    "id":"ecaa-eg",
+    "name":"Egyptian Civil Aviation Authority",
+    "short_name":"ECAA Egypt",
+    "type":"CAA",
+    "country_code":"EG",
+    "hq_city":"Cairo",
+    "website":"https://www.civilaviation.gov.eg/",
+    "lat":30.0444,
+    "lon":31.2357,
+    "description":"Egypt’s civil aviation regulator under the Ministry of Civil Aviation; certification and surveillance across airlines, airports and ANS."
+  }
 ]
