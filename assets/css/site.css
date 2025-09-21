@@ -17,31 +17,34 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100%;
   height: auto;
+  overflow-y: auto; /* allow tall pages to scroll */
 }
 
 /* === Leap Day layout fixes ============================================== */
-/* Leap Day positions several containers; force normal flow so content can grow */
-.wrapper, .content, .inner, .post, .post-content, #country-shell {
+/* Force normal document flow so content can grow naturally */
+.wrapper,
+.content,
+.inner,
+.post,
+.post-content,
+#country-shell {
   position: static !important;
   height: auto !important;
   min-height: 0 !important;
   overflow: visible !important;
 }
 
-/* In Leap Day the footer is placed with absolute positioning; make it flow */
+/* Footer/credits sometimes absolutely positioned in the theme */
 footer, .site-footer {
   position: static !important;
 }
 
-/* Some theme builds set min-heights on sections; clear them */
+/* Defensive: clear any lingering fixed/min heights */
 section, .markdown-body, #main, #content {
   min-height: 0 !important;
   height: auto !important;
   position: static !important;
 }
-
-/* Ensure the outer wrapper can exceed the viewport */
-body, html { overflow-y: auto; }
 
 /* Map blocks must reserve vertical space */
 #countries-map, #country-map {
@@ -100,20 +103,36 @@ table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid var(--border); padding: 8px; }
 th { background: #f8fafc; text-align: left; }
 
-/* === Fix Leap Day sidebar alignment ===================================== */
-
-/* Desktop/tablet: keep sidebar fixed on the left, content offset to the right */
-@media (min-width: 800px) {
-  /* Choose a fixed width so math is predictable */
+/* === Sidebar alignment (desktop/tablet) ================================== */
+@media (min-width: 860px) {
   .sidebar {
     position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 260px;              /* tweak to taste (240–300px) */
-    height: 100%;
-    z-index: 1000;             /* above background, below modals */
+    top: 0; left: 0;
+    width: 260px;               /* adjust 240–300px if desired */
+    height: 100vh;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
   }
-
-  /* Make the main column start to the right of the sidebar */
   .wrapper {
-    margin-left: 260px !
+    margin-left: 260px !important; /* must match .sidebar width */
+    width: auto !important;
+  }
+}
+
+/* Ensure predictable box sizing and prevent overflow in sidebar */
+.sidebar, .wrapper, section, .content, .inner { max-width: none; box-sizing: border-box; }
+.sidebar img { max-width: 100%; height: auto; }
+.sidebar p, .sidebar .view, .sidebar .repo-owner {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  margin-right: 0;
+}
+
+/* (Optional) Hide Leap Day GitHub credits/buttons if they misalign.
+   Remove this block if you want to keep them visible. */
+.credits,
+.site-footer,
+.sidebar .repo-owner,
+.sidebar .view { display: none !important; }
