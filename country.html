@@ -3,21 +3,23 @@ layout: default
 title: Aviation Oversight Atlas - Country Information
 permalink: /country/
 ---
-<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
-<script>window.BASE = '{{ "" | relative_url }}';</script>
-
 
 <div id="country-shell" class="post">
-  <div class="post-content"><p>Loading country…</p></div>
+  <div class="post-content">
+    <p>Loading country…</p>
+  </div>
 </div>
 
 <div id="country-map" style="height:420px;border-radius:8px;overflow:hidden;margin-top:1rem;"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
-<script>
-  window.BASE = '{{ "" | relative_url }}';
-</script>
+
+<!-- Project base for dynamic JS -->
+<script>window.BASE='{{ "" | relative_url }}';</script>
+
+<!-- Your custom overrides (must be last!) -->
+<link rel="stylesheet" href="{{ '/assets/css/site.css?v=' | append: site.github.build_revision | relative_url }}">
+
 <script src="{{ '/assets/js/country-dynamic.js' | relative_url }}"></script>
 
