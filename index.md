@@ -3,8 +3,6 @@ layout: default
 title: Aviation Oversight Atlas
 ---
 
-<script>window.BASE = '{{ "" | relative_url }}';</script>
-
 Explore aviation safety authorities by **country**.
 
 - Browse the [Countries]({{ '/countries/' | relative_url }}) directory (search, grid, and world map).

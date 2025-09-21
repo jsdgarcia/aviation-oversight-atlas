@@ -3,8 +3,6 @@ layout: default
 title: Countries
 permalink: /countries/
 ---
-<script>window.BASE = '{{ "" | relative_url }}';</script>
-
 
 > Browse countries, search by name or code, and jump to a country page.
 
