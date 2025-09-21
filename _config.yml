@@ -15,11 +15,3 @@ google_analytics: G-39G1G2LEPY
 markdown: kramdown
 kramdown:
   input: GFM
-
-navbar:
-  links:
-    - title: Home
-      url: /
-    - title: Countries
-      url: /countries/
-
