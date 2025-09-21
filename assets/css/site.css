@@ -38,17 +38,3 @@ html, body {
   display: block;
   height: 420px;
 }
-
-/* 6) Desktop layout: use a simple grid so the sidebar never overlaps */
-@media (min-width: 860px) {
-  .wrapper {
-    display: grid !important;
-    grid-template-columns: 260px 1fr; /* sidebar | main */
-  }
-  .sidebar {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: auto;
-  }
-}
