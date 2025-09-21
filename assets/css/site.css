@@ -1,12 +1,70 @@
+/* === Al-folio-ish palette & typography =================================== */
+:root{
+  --bg: #ffffff;
+  --text: #1f2937;        /* slate-800 */
+  --muted: #6b7280;       /* slate-500 */
+  --border: #e5e7eb;      /* slate-200 */
+  --card: #ffffff;
+  --accent: #2f80ed;      /* al-folio-ish blue */
+  --accent-weak: #e8f2ff;
+  --link: var(--accent);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Leap Day uses a sidebar + content layout. Normalize link + hover colors. */
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Headings with a bit more presence like al-folio */
+h1, h2, h3 { letter-spacing: -0.01em; }
+h1 { font-size: 2rem; margin: 0.2rem 0 0.8rem; }
+h2 { font-size: 1.4rem; margin-top: 1.6rem; }
+
+/* === Cards & grid (your directory UI) ==================================== */
 .grid { display: grid; gap: 1rem; }
 .grid-2 { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
-.country-card, .org-card { display:block; border:1px solid #e5e7eb; border-radius:12px; padding:1rem; text-decoration:none; background:#fff; }
-.country-card:hover, .org-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
-.country-name { font-weight:600; font-size:1.05rem; margin-bottom:.25rem; }
-.country-meta { color:#6b7280; font-size:.9rem; }
-.badge { display:inline-block; padding:.1rem .5rem; border-radius:999px; background:#eef2ff; font-size:.8rem; margin-right:.35rem; }
-.badge-secondary { background:#f1f5f9; }
-.badge-info { background:#ecfeff; }
-.card-buttons .btn { margin-right:.4rem; }
-.muted { color:#6b7280; }
+
+.country-card, .org-card {
+  display:block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  transition: box-shadow .15s ease, transform .05s ease;
+}
+.country-card:hover, .org-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,.06);
+  transform: translateY(-1px);
+}
+
+.country-name { font-weight: 600; font-size: 1.05rem; margin-bottom: .25rem; }
+.country-meta, .muted { color: var(--muted); font-size: .92rem; }
+
+/* Badges / buttons like al-folio */
+.badge {
+  display:inline-block; padding:.15rem .6rem; border-radius:999px;
+  background: var(--accent-weak); color: #1e3a8a; font-size:.8rem; margin-right:.35rem;
+}
+.badge-secondary { background:#f3f4f6; color:#374151; }
+.badge-info { background:#e0f2fe; color:#075985; }
+
+.btn, .btn-sm {
+  display:inline-block; border:1px solid var(--accent); color:var(--accent);
+  padding:.35rem .7rem; border-radius:10px; font-size:.9rem;
+}
+.btn:hover, .btn-sm:hover { background: var(--accent); color:#fff; text-decoration:none; }
+
+/* Tables (countries list uses one in some themes) */
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid var(--border); padding: 8px; }
+th { background: #f8fafc; text-align: left; }
+
+/* Leaflet map rounded corners to match cards */
+#countries-map, #country-map { border-radius: 12px; overflow: hidden; }
 
