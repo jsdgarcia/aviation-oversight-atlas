@@ -68,3 +68,13 @@ th { background: #f8fafc; text-align: left; }
 /* Leaflet map rounded corners to match cards */
 #countries-map, #country-map { border-radius: 12px; overflow: hidden; }
 
+/* Hide only the "View on GitHub" button in Leap Day */
+p.view a[href*="github.com"] {
+  display: none !important;
+}
+
+/* Hide the Octocat image in Leap Day's sidebar */
+.sidebar img {
+  display: none !important;
+}
+
