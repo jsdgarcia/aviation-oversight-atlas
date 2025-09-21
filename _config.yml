@@ -9,7 +9,6 @@ plugins:
 # PROJECT SITE: this MUST match your repo name
 baseurl: "/aviation-oversight-atlas"
 
-<<<<<<< HEAD
 show_downloads: false
 google_analytics: G-39G1G2LEPY
 
@@ -20,14 +19,6 @@ navbar:
       url: /
     - title: Countries
       url: /countries/
-=======
-# navbar:
-#   links:
-#     - title: Home
-#       url: /
-#     - title: Countries
-#       url: /countries/
->>>>>>> 3334152 (Restore leap day template)
 
 markdown: kramdown
 kramdown:
