@@ -20,8 +20,7 @@ html, body {
   overflow-y: auto; /* allow tall pages to scroll */
 }
 
-/* === Leap Day layout fixes ============================================== */
-/* Force normal document flow so content can grow naturally */
+/* === Let the content “frame” expand with injected content =============== */
 .wrapper,
 .content,
 .inner,
@@ -103,20 +102,27 @@ table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid var(--border); padding: 8px; }
 th { background: #f8fafc; text-align: left; }
 
-/* === Sidebar alignment (desktop/tablet) ================================== */
+/* === Sidebar + main layout (desktop/tablet) ============================= */
+/* Use CSS Grid instead of fixed positioning to avoid overlap */
 @media (min-width: 860px) {
+  .wrapper {
+    display: grid !important;
+    grid-template-columns: 260px 1fr;  /* sidebar width | main */
+    gap: 0;
+    align-items: start;
+  }
   .sidebar {
-    position: fixed !important;
-    top: 0; left: 0;
-    width: 260px;               /* adjust 240–300px if desired */
+    position: sticky;   /* stays visible when scrolling */
+    top: 0;
     height: 100vh;
     padding: 24px 20px;
     box-sizing: border-box;
     overflow-y: auto;
   }
-  .wrapper {
-    margin-left: 260px !important; /* must match .sidebar width */
-    width: auto !important;
+  /* Ensure main area fills the second grid column cleanly */
+  section, .content, #main, #content, .inner {
+    width: 100% !important;
+    margin: 0 !important;
   }
 }
 
