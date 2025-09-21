@@ -21,6 +21,6 @@ markdown: kramdown
 kramdown:
   input: GFM
 
-show_downloads: ["false"]
+show_downloads: [false]
 google_analytics: "G-39G1G2LEPY"
 
