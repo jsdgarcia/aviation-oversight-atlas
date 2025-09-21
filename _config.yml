@@ -10,6 +10,10 @@ plugins:
 # PROJECT SITE: this MUST match your repo name
 baseurl: "/aviation-oversight-atlas"
 
+show_downloads: false
+google_analytics: G-39G1G2LEPY
+
+
 navbar:
   links:
     - title: Home
@@ -20,7 +24,4 @@ navbar:
 markdown: kramdown
 kramdown:
   input: GFM
-
-show_downloads: [false]
-google_analytics: "G-39G1G2LEPY"
 
