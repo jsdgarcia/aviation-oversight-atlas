@@ -1,11 +1,6 @@
 (function(){
   const BASE = (window.BASE || '');
 
-  // --- Settings ------------------------------------------------------------
-  const ENABLE_EXPANDER = true;   // set to false to always show everything
-  const COLLAPSE_AFTER = 24;      // how many cards to show before "Show more"
-  // ------------------------------------------------------------------------
-
   function getCode(){
     const url = new URL(location.href);
     const q = url.searchParams.get('code');
@@ -15,6 +10,14 @@
     const i = parts.indexOf('c');
     if (i>=0 && parts[i+1]) return parts[i+1].toUpperCase();
     return null;
+  }
+
+  // Sort helper: CAA (0), AIA (1), everything else (2)
+  function typeRank(t){
+    const key = (t || '').toUpperCase();
+    if (key === 'CAA') return 0;
+    if (key === 'AIA') return 1;
+    return 2;
   }
 
   const cc = getCode();
@@ -29,10 +32,16 @@
     const meta = COUNTRIES[cc];
     if (!meta){ shell.innerHTML = "<p>Country not found.</p>"; return; }
 
-    // ✅ NO LIMIT: include ALL organizations for the country
+    // ✅ CAA first, then AIA, then others; alphabetical by name within each
     const list = ORGS
       .filter(o => (o.country_code||'').toUpperCase() === cc)
-      .sort((a,b) => (a.type||'').localeCompare(b.type||'') || a.name.localeCompare(b.name));
+      .sort((a, b) => {
+        const ta = typeRank(a.type), tb = typeRank(b.type);
+        if (ta !== tb) return ta - tb;
+        const na = (a.name || '').toString();
+        const nb = (b.name || '').toString();
+        return na.localeCompare(nb, undefined, {sensitivity: 'base'});
+      });
 
     document.title = `${meta.name} | Aviation Oversight Atlas`;
 
@@ -59,25 +68,7 @@
       </div>
     `;
 
-    // Build the grid (with optional expander)
-    let grid = '';
-    if (!ENABLE_EXPANDER || list.length <= COLLAPSE_AFTER) {
-      grid = `<div class="grid grid-2">${list.map(cardHTML).join('')}</div>`;
-    } else {
-      const visible = list.slice(0, COLLAPSE_AFTER);
-      const hidden = list.slice(COLLAPSE_AFTER);
-      grid = `
-        <div class="grid grid-2" id="org-grid">
-          ${visible.map(cardHTML).join('')}
-          <div id="more-container" style="display:none;">
-            ${hidden.map(cardHTML).join('')}
-          </div>
-        </div>
-        <div style="margin-top:1rem;">
-          <button id="show-more" class="btn btn-sm">Show ${hidden.length} more</button>
-        </div>
-      `;
-    }
+    const grid = `<div class="grid grid-2">${list.map(cardHTML).join('')}</div>`;
 
     shell.innerHTML = `
       <div class="post">
@@ -88,16 +79,7 @@
       </div>
     `;
 
-    // Wire up expander if present
-    const btn = document.getElementById('show-more');
-    if (btn) {
-      btn.addEventListener('click', () => {
-        document.getElementById('more-container').style.display = '';
-        btn.remove();
-      });
-    }
-
-    // Map: plot ALL organizations, connect each to the centroid
+    // Map: only organization markers (no centroid, no lines)
     if (typeof meta.lat === 'number' && typeof meta.lon === 'number') {
       const map = L.map('country-map', { scrollWheelZoom: false }).setView([meta.lat, meta.lon], 4);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap' }).addTo(map);
@@ -107,13 +89,8 @@
         if (typeof o.lat !== 'number' || typeof o.lon !== 'number') return;
         const m = L.marker([o.lat, o.lon]).addTo(map)
           .bindPopup(`<b>${o.name}</b><br>${o.type || ''}${o.hq_city ? ' · '+o.hq_city : ''}`);
-        L.polyline([[o.lat, o.lon], [meta.lat, meta.lon]], {weight:1, opacity:0.6}).addTo(map);
         features.push(m);
       });
-
-      // Always include the centroid in bounds
-      const centroidMarker = L.circleMarker([meta.lat, meta.lon], {radius: 4, opacity: 0.8});
-      features.push(centroidMarker);
 
       if (features.length) {
         const group = L.featureGroup(features);
