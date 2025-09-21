@@ -99,3 +99,21 @@ h2 { font-size: 1.4rem; margin-top: 1.6rem; }
 table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid var(--border); padding: 8px; }
 th { background: #f8fafc; text-align: left; }
+
+/* === Fix Leap Day sidebar alignment ===================================== */
+
+/* Desktop/tablet: keep sidebar fixed on the left, content offset to the right */
+@media (min-width: 800px) {
+  /* Choose a fixed width so math is predictable */
+  .sidebar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 260px;              /* tweak to taste (240–300px) */
+    height: 100%;
+    z-index: 1000;             /* above background, below modals */
+  }
+
+  /* Make the main column start to the right of the sidebar */
+  .wrapper {
+    margin-left: 260px !
