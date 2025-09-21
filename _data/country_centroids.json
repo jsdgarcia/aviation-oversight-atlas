@@ -1,5 +1,24 @@
 {
   "BR": { "name": "Brazil", "lat": -10.0, "lon": -55.0 },
-  "US": { "name": "United States", "lat": 39.8, "lon": -98.6 }
+  "US": { "name": "United States", "lat": 39.8, "lon": -98.6 },
+  "CN": { "name": "China", "lat": 35.0, "lon": 103.0 },
+  "IN": { "name": "India", "lat": 21.0, "lon": 78.0 },
+  "SG": { "name": "Singapore", "lat": 1.35, "lon": 103.82 },
+  "GB": { "name": "United Kingdom", "lat": 55.3781, "lon": -3.4360 },
+  "CA": { "name": "Canada", "lat": 56.1304, "lon": -106.3468 },
+  "AU": { "name": "Australia", "lat": -25.0, "lon": 133.0 },
+  "DE": { "name": "Germany", "lat": 51.1657, "lon": 10.4515 },
+  "FR": { "name": "France", "lat": 46.2276, "lon": 2.2137 },
+  "JP": { "name": "Japan", "lat": 36.2048, "lon": 138.2529 },
+  "ZA": { "name": "South Africa", "lat": -30.5595, "lon": 22.9375 },
+  "SG": { "name": "Singapore", "lat": 1.3521, "lon": 103.8198 },
+  "MY": { "name": "Malaysia", "lat": 4.2105, "lon": 101.9758 },
+  "MX": { "name": "Mexico", "lat": 23.6345, "lon": -102.5528 },
+  "RU": { "name": "Russia", "lat": 61.5240, "lon": 105.3188 },
+  "AE": { "name": "United Arab Emirates", "lat": 23.4241, "lon": 53.8478 },
+  "EG": { "name": "Egypt", "lat": 26.8206, "lon": 30.8025 },
+  "GB": { "name": "United Kingdom", "lat": 55.3781, "lon": -3.4360 },
+  "ES": { "name": "Spain", "lat": 40.4637, "lon": -3.7492 },
+  "IT": { "name": "Italy", "lat": 41.8719, "lon": 12.5674 },
+  "KR": { "name": "South Korea", "lat": 35.9078, "lon": 127.7669 }
 }
-
