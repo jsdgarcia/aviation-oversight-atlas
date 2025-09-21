@@ -12,6 +12,9 @@ baseurl: "/aviation-oversight-atlas"
 show_downloads: false
 google_analytics: G-39G1G2LEPY
 
+markdown: kramdown
+kramdown:
+  input: GFM
 
 navbar:
   links:
@@ -19,8 +22,4 @@ navbar:
       url: /
     - title: Countries
       url: /countries/
-
-markdown: kramdown
-kramdown:
-  input: GFM
 
