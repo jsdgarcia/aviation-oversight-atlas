@@ -1,4 +1,4 @@
-/* === Al-folio-ish palette & typography =================================== */
+/* === Palette & base ====================================================== */
 :root{
   --bg: #ffffff;
   --text: #1f2937;        /* slate-800 */
@@ -17,9 +17,9 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100%;
   height: auto;
-
 }
-/* Make Leap Day containers expand with content */
+
+/* === Fix Leap Day “frame” so it expands with content ===================== */
 .wrapper,
 .content,
 .inner,
@@ -32,8 +32,7 @@ html, body {
   overflow: visible !important;
 }
 
-
-/* Map block should reserve space */
+/* Map block must reserve vertical space */
 #country-map {
   display: block;
   height: 420px;
@@ -45,17 +44,15 @@ html, body {
   margin: 0 auto;
 }
 
-
-/* Leap Day uses a sidebar + content layout. Normalize link + hover colors. */
+/* === Links & headings ==================================================== */
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* Headings with a bit more presence like al-folio */
 h1, h2, h3 { letter-spacing: -0.01em; }
-h1 { font-size: 2rem; margin: 0.2rem 0 0.8rem; }
+h1 { font-size: 2rem; margin: .2rem 0 .8rem; }
 h2 { font-size: 1.4rem; margin-top: 1.6rem; }
 
-/* === Cards & grid (your directory UI) ==================================== */
+/* === Cards & grid ======================================================== */
 .grid { display: grid; gap: 1rem; }
 .grid-2 { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
 
@@ -75,11 +72,8 @@ h2 { font-size: 1.4rem; margin-top: 1.6rem; }
 .country-name { font-weight: 600; font-size: 1.05rem; margin-bottom: .25rem; }
 .country-meta, .muted { color: var(--muted); font-size: .92rem; }
 
-/* Badges / buttons like al-folio */
-.badge {
-  display:inline-block; padding:.15rem .6rem; border-radius:999px;
-  background: var(--accent-weak); color: #1e3a8a; font-size:.8rem; margin-right:.35rem;
-}
+.badge { display:inline-block; padding:.15rem .6rem; border-radius:999px;
+  background: var(--accent-weak); color: #1e3a8a; font-size:.8rem; margin-right:.35rem; }
 .badge-secondary { background:#f3f4f6; color:#374151; }
 .badge-info { background:#e0f2fe; color:#075985; }
 
@@ -89,15 +83,12 @@ h2 { font-size: 1.4rem; margin-top: 1.6rem; }
 }
 .btn:hover, .btn-sm:hover { background: var(--accent); color:#fff; text-decoration:none; }
 
-/* Tables (countries list uses one in some themes) */
+/* Tables */
 table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid var(--border); padding: 8px; }
 th { background: #f8fafc; text-align: left; }
 
-/* Leaflet map rounded corners to match cards */
+/* Leaflet map rounded corners */
 #countries-map, #country-map { border-radius: 12px; overflow: hidden; }
-
-
-
 
 
